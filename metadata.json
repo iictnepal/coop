@@ -1,0 +1,8 @@
+{
+  "name": "Remix Aadhunik Jana Saving \u0026 Credit Co-operative Ltd.",
+  "description": "Official website, bilingual member portal, loan inquiries, savings schemes, and CMS for Aadhunik Jana Saving \u0026 Credit Co-operative Ltd., Nagarjun-4, Kathmandu, Nepal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

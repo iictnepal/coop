@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #f8f7f4;
+    --ink: #111111;
+    --accent: #d6a943;
+    --accent-hover: #c29532;
+    --ink-faint: rgba(17, 17, 17, 0.08);
+    --ink-medium: rgba(17, 17, 17, 0.6);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  /* When language is Nepali */
+  [lang="ne"], .font-nepali {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  }
+}
+
+/* Typography classes for Variation 2 */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
+}
+
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-medium);
+  font-weight: 700;
+}
+
+.badge-brutal {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.65rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  vertical-align: middle;
+  border: 1px solid var(--ink);
+}
+
+/* Neo-Brutalist architectural borders & shadows */
+.border-ink {
+  border-color: var(--ink);
+}
+
+.brutal-shadow-sm {
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.brutal-shadow {
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.brutal-shadow-md {
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.brutal-shadow-lg {
+  box-shadow: 12px 12px 0 var(--ink);
+}
+
+.brutal-card {
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.brutal-card-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 12px 12px 0 var(--ink);
+}
+
+/* Buttons */
+.btn-brutal-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.btn-brutal-primary:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.btn-brutal-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border: 2px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.btn-brutal-outline:hover {
+  background: var(--ink-faint);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1efe9;
+}
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 0px;
+}

@@ -1,0 +1,30 @@
+# ==============================================================
+# Apache Configuration for Aadhunik Jana SACCOS
+# Compatible with XAMPP Apache & cPanel Web Server
+# ==============================================================
+
+Options -Indexes
+
+<FilesMatch "^(config|\.env|\.git|\.sql|composer\.lock)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirect trailing slash if not folder
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Map root to public/index.php if exists
+    RewriteRule ^$ public/index.php [L]
+
+    # Clean URLs for admin
+    RewriteRule ^admin/?$ admin/index.php [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript application/json
+</IfModule>
